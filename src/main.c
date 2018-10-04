@@ -59,10 +59,10 @@ int main(int argc, char *argv[], char *envp[])
     {
       for (;;)
       {
-        usleep(1000);
+       // usleep(1000);
       }
     }
-    else if (strcmp(argv[1], "cpu-mem") == 0) //If argv[1] = 'cpu-mem', execute code with intensive use of UCP and memory:
+    else if (strcmp(argv[1], "cpu_mem") == 0) //If argv[1] = 'cpu-mem', execute code with intensive use of UCP and memory:
     {
       for (;;)
       {
