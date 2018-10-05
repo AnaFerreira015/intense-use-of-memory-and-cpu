@@ -9,9 +9,9 @@
 int main(int argc, char *argv[], char *envp[])
 {
   int pid; // Process ID
-  char cpu[100], cpu_mem[100], kill_process[20];
+  char ucp[100], ucp_mem[100], kill_process[20];
   int i;            //counter variable
-  int time_process; //time process
+  // int time_process; //time process
 
   pid = fork(); //creating a Process
   // printf("PID = %d\n",pid);
@@ -22,11 +22,14 @@ int main(int argc, char *argv[], char *envp[])
     exit(-1);
   }
 
-  sprintf(cpu, "%s%d%s", "ps -p ", pid, " -o pcpu | sed 1d | tr -d ' '");          //script to result CPU
-  sprintf(cpu_mem, "%s%d%s", "pmap -x ", pid, " | grep total | awk '{print $4}'"); //script to result RAM
+  // sprintf(ucp_mem, "%s%d%s","ps v ",pid," | awk '{print $9}' | grep -v MEM");
+  // system(ucp_mem);
+
+  sprintf(ucp, "%s%d%s", "ps -p ", pid, " -o pcpu | sed 1d | tr -d ' '");          //script to result CPU
+  // sprintf(ucp_mem, "%s%d%s", "pmap -x ", pid, " | grep total | awk '{print $4}'"); //script to result RAM
   sprintf(kill_process, "%s%d", "kill ", pid);                                     //script to kill the process
 
-  // system(cpu);
+  // system(ucp);
 
   if (pid > 0) //I'm the father process
   {
@@ -34,11 +37,11 @@ int main(int argc, char *argv[], char *envp[])
     {
       system("clear");
 
-      if (strcmp(argv[1], "cpu") == 0) //if the argument after the program name is cpu, we executing the usage of him
+      if (strcmp(argv[1], "ucp") == 0) //if the argument after the program name is ucp, we executing the usage of him
       {
         printf("||| CPU Process |||\n");
       }
-      else if (strcmp(argv[1], "cpu_mem") == 0) //if the argument after the program name is cpu-mem, we executing the usage of him
+      else if (strcmp(argv[1], "ucp-mem") == 0) //if the argument after the program name is ucp_mem, we executing the usage of him
       {
         printf("||| CPU AND MEMORY Process |||\n");
       }
@@ -46,23 +49,23 @@ int main(int argc, char *argv[], char *envp[])
       printf("TIME: %ds\n", i);
       // printf("CPU Process\n");
       printf("CPU\n");
-      system(cpu); //calling the cpu usage
+      system(ucp); //calling the ucp usage
       printf("\nRAM\n");
-      system(cpu_mem); //calling the moemory usage
+      system(ucp_mem); //calling the moemory usage
       usleep(1000000); //suspend execution for microsecond intervals
     }
     system(kill_process);
   }
   else // I'm the soon process (pid == 0)
   {
-    if (strcmp(argv[1], "cpu") == 0) //If argv[1] = 'cpu', execute code with intensive use of CPU:
+    if (strcmp(argv[1], "ucp") == 0) //If argv[1] = 'ucp', execute code with intensive use of CPU:
     {
       for (;;)
       {
        // usleep(1000);
       }
     }
-    else if (strcmp(argv[1], "cpu_mem") == 0) //If argv[1] = 'cpu-mem', execute code with intensive use of UCP and memory:
+    else if (strcmp(argv[1], "ucp_mem") == 0) //If argv[1] = 'ucp_mem', execute code with intensive use of UCP and memory:
     {
       for (;;)
       {
