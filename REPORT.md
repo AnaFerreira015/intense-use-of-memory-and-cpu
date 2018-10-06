@@ -17,9 +17,19 @@
 	
 # Resultados
 
+## Uso intenso da UCP
+
+* Com o objetivo de fazer a UCP funcionar de forma intensa, utilizamos o comando seguinte:
 ```
 for (;;) {}
 ```
+Que consiste em um loop infinito, dessa forma, essa repetição só é interrompida com o comando que mata o processo pai:
+````
+  system(kill_process);
+````
+finalizando, consequentemente, o filho. 
+
+![Uso de CPU](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp.png)
 
 
 # Discussão
