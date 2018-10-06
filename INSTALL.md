@@ -1,6 +1,6 @@
 # Compilação e execução:
 
-* <p>Para a sua compilação e execução do programa, sujerimos que siga os seguintes passos:</p>
+* <p>Para sua compilação e execução do programa, sujerimos que siga os seguintes passos:</p>
       * Para a compilação digite essa linha de código em seu terminal:
     <p>  
         <ul>
