@@ -39,10 +39,11 @@ Essa foi então a forma escolhida por nossa equipe para ficar como forma definit
   			}
 ````
 Dessa forma, esse comando ocasionava também o funcionamento da UCP, porém, não de forma intensa, mas sim, um funcionamento moderado, que pode ser observado no gráfio a seguir:
+
 ![Uso de UCP com o comando usleep](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp-usleep.png?raw=true)
 
 
-##Utilização intensa da UCP e Memória
+## Utilização intensa da UCP e Memória
 
 * Para obter o resultado da UCP em funcionamento intenso simultanemanete me conjunto com a Memória foi um desafio e a forma encontrada por nossa equipe foi a utilização do comando:
 ````
@@ -64,17 +65,19 @@ Com ele nós utilizamos a lógica de calcular o tempo antes do programa entrar e
   		}
 ````
 Com a observação do comportamento do programa com essa estrutura de aloação dinâmica pudemos elaborar o seguinte gráfico:
+
 ![Uso de UCP e MEM](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp-mem.png)
 
 Mais uma vez essa foi a forma escolhida por nós que mais se aproximou da funcionamento esperado por nós, mas o caminho até essa decisão foi longo, a estrutura inical criada por nós foi a seguinte:
-``
+````
 for(;;)
   {
   	malloc(10*sizeof(int));
         usleep(1000);
   }
-``
+````
 Porém, observamos que essa estrutura não nos proprocionava o funcionamento intenso da Memória, mas apenas o da UCP, sendo então descartados por nós.
-## Utilização intensa da UCP e memória
 
-TODO: explicar se o comportamento da curva **UCP-MEM** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
+## Dicursão
+
+* Nossa equipe chegou à presente definição do código (https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/src/main.c) pois analizamos os resultados que foram consisos e de acordo com o solicitado pelo professor, depois de muita pesquisa conseguimos consertar os bugs e o total funcionamento do programa de monitoramento de uso da UCP e Memória.
