@@ -11,7 +11,7 @@
     <p>
         <ul>
           <li>Para o consumo da UCP : </li>
-            ./main uc
+            ./main ucp
           </br>
           <li> Para o consumo da UCP-MEM : </li>
             ./main ucp-mem
