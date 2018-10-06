@@ -29,14 +29,21 @@ Que consiste em um loop infinito, dessa forma, essa repetição só é interromp
 ````
 finalizando, consequentemente, o filho. 
 
-![Uso de CPU](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp.png)
+![Uso de UCP](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp.png)
+
+Essa foi então a forma escolhida por nossa equipe para ficar como forma definitiva do nosso programa pois resultou no funcionamento esperado por nós, mas vale ressaltar que durante nossos testes iniciais utilizamos uma estrutura do laço infinito que continha a seguinte estrutura :
+````
+	for(;;)
+  			{
+          // usleep(100);
+  			}
+````
+Dessa forma, esse comando ocasionava também o funcionamento da UCP, porém, não de forma intensa, mas sim, um funcionamento moderado, que pode ser observado no gráfio a seguir:
+![Uso de UCP com o comando usleep](https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/img/ucp.png)
 
 
-# Discussão
+##Utilização intensa da UCP e Memória
 
-## Utilização intensa da UCP
-
-TODO: explicar se o comportamento da curva **UCP** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
 
 ## Utilização intensa da UCP e memória
 
