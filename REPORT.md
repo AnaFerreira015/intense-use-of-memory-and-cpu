@@ -5,15 +5,14 @@
 * Discente 1
 	* Nome: Ana Lúcia da Silva Ferreira
 	* Matrícula: 18110600 
-	* Distribuição da nota (%): TODO
 * Discente 2
 	* Nome: Letícia Melquíades dos Santos Medeiros
 	* Matrícula: 18110472
-	* Distribuição da nota (%): TODO
 * Discente 3
 	* Nome: Kelly Bianca Araújo Silva
 	* Matrícula: 18112705
-	* Distribuição da nota (%): TODO		
+	
+* A distribuição da nota será feita de forma igualitária entre as componentes.	
 	
 # Resultados
 
