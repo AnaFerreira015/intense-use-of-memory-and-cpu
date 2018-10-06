@@ -17,11 +17,9 @@
 	
 # Resultados
 
-* TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
-	*  **UCP**: consumo da UCP em porcentagem.
-	*  **UCP-MEM**: consumo da memória principal em Kilobytes.
-* TODO: Cada métrica deve ser plotada em duas curvas separadas.
-* TODO: o eixo das abscissas deve representar o tempo medido a cada segundo e o eixo das coordenadas deve representar a métrica medida.
+```
+for (;;) {}
+```
 
 
 # Discussão
