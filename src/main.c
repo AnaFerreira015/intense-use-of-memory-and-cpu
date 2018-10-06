@@ -16,20 +16,17 @@ int main(int argc, char *argv[], char *envp[])
   int time_process; //time process
 
     pid = fork(); //creating a Process
-    // printf("PID = %d\n",pid);
+   
 
     if(pid < 0) //process fail
     {
       perror("Erro: ");
       exit(-1);
     }
-      // system(ucp_mem);
-      // pmap pid | grep -i total | awk '{print $2}'
+    
 
       sprintf(cpu, "%s%d%s", "ps -p ", pid, " -o pcpu | sed 1d | tr -d ' '");  //script to result CPU
-      sprintf(cpu_mem,"%s%d%s","pmap ", pid, " | grep -i total |" " awk '{print $2}'");
-      // sprintf(cpu_mem, "%s%d%s","ps v ",pid," | awk '{print $9}' | grep -v MEM"); //script to result RAM
-      // sprintf(cpu_mem, "%s%d%s", "pmap -x ", pid, " | grep total | awk '{print $4}'");
+      sprintf(cpu_mem,"%s%d%s","pmap ", pid, " | grep -i total |" " awk '{print $2}'"); //script to result MEM
       sprintf(kill_process, "%s%d","kill ",pid);  //script to kill the process
 
 
@@ -44,7 +41,6 @@ int main(int argc, char *argv[], char *envp[])
           printf("||| UCP Process |||\n");
           printf("TIME: %ds\n",i);
           printf("UCP(%%)\n");
-            // system("ps -p 16411 -o %cpu | grep -v %CPU");
           system(cpu); //calling the cpu usage
         }
         else if(strcmp(argv[1],"ucp-mem") == 0) //if the argument after the program name is cpu-mem, we executing the usage of him
@@ -52,7 +48,6 @@ int main(int argc, char *argv[], char *envp[])
           printf("||| UCP AND MEMORY Process |||\n");
           printf("TIME: %ds\n",i);
           printf("UCP(%%)\n");
-            // system("ps -p 16411 -o %cpu | grep -v %CPU");
           system(cpu); //calling the cpu usage
           printf("\nMEM\n");
           system(cpu_mem); //calling the memory usage
@@ -75,10 +70,10 @@ int main(int argc, char *argv[], char *envp[])
   		else if (strcmp(argv[1], "ucp-mem") == 0) //If argv[1] = 'cpu-mem', execute code with intensive use of UCP and memory:
   		{
         clock_t start_t, end_t, total_t;
-        start_t = clock(); // start to cont clock
+        start_t = clock(); // start to count clock
   			for(;;)
   			{
-          end_t = clock(); // end o clock
+          end_t = clock(); // end of clock
           total_t = (double)(end_t - start_t) / CLOCKS_PER_SEC;
           //
           if(total_t <= 10000)
