@@ -75,8 +75,8 @@ for(;;)
         usleep(1000);
   }
 ````
-Porém, observamos que essa estrutura não nos proprocionava o funcionamento intenso da Memória, mas apenas o da UCP, sendo então descartados por nós.
+Porém, observamos que essa estrutura não nos proporcionava o funcionamento intenso da memória, mas apenas o da UCP, sendo então descartados por nós.
 
 ## Dicursão
 
-* Nossa equipe chegou à presente definição do código (https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/src/main.c) pois analizamos os resultados que foram consisos e de acordo com o solicitado pelo professor, depois de muita pesquisa conseguimos consertar os bugs e o total funcionamento do programa de monitoramento de uso da UCP e Memória.
+* Nossa equipe chegou à presente definição do código (https://github.com/AnaFerreira015/intense-use-of-memory-and-cpu/blob/master/src/main.c) pois analisamos os resultados que foram concisos e de acordo com o solicitado pelo professor, depois de muita pesquisa conseguimos consertar os bugs e o total funcionamento do programa de monitoramento de uso da UCP e memória.
